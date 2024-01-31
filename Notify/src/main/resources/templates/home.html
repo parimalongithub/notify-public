@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notify</title>
+
+    <link rel="icon" type="image/x-icon" href="/icon.ico">
+
+
+    <script th:inline="javascript">
+        var showSuccess =  false;
+
+        function hideSuccessMessage() {
+            document.getElementById("successMessage").style.display = "none";
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 80%; /* Adjust the width for larger screens */
+            max-width: 400px; /* Set a maximum width */
+            background-color: rgba(255, 255, 255, 0.8); /* Added background transparency */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            color: #010101;
+            margin-top: 20px; /* Add margin to the top */
+        }
+
+        /* Media Query for Smaller Screens */
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 90%; /* Adjust the width for smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Notify</h1>
+        </div>
+
+        <div th:if="${showSuccess}" id="successMessage" style="text-align: center; color: green; font-weight: bold;">
+            I'll keep you posted !
+            <script th:inline="javascript">
+                setTimeout(function () {
+                    hideSuccessMessage();
+                }, 500000);
+            </script>
+        </div>
+
+        <div th:unless="${showSuccess}">
+            <form th:action="@{/submitrequest}" th:object="${userdata}" method="post">
+                <label>Email:</label>
+                <input type="email" required th:field="*{email}">
+
+                <label>Favourite Artist:</label>
+                <input type="text" required th:field="*{artistName}">
+
+                <label>City:</label>
+                <input type="text" required th:field="*{city}">
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            Made with ❤️ by Parimal
+        </div>
+    </div>
+</body>
+
+</html>

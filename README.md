@@ -13,13 +13,21 @@ Notify is a Spring Boot web application that enables users to receive email noti
 
 Make sure you have the following installed:
 
-- Java 8 or higher
+- Java 17
 - Maven
 - Your preferred IDE (e.g., IntelliJ, Eclipse)
+
+## Architecture Of project
+
+![Architecture](/screenshots/3.png)
+
 
 ## Project Screenshots
 ![Screenshot1](/screenshots/1.png)
 
 
 ![Screenshot2](/screenshots/2.png)
+
+
+
 

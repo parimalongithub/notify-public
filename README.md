@@ -17,7 +17,7 @@ Make sure you have the following installed:
 - Maven
 - Your preferred IDE (e.g., IntelliJ, Eclipse)
 
-## Architecture Of project
+## Architecture Of Project
 
 ![Architecture](/architecture.png)
 

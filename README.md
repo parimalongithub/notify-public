@@ -19,7 +19,7 @@ Make sure you have the following installed:
 
 ## Architecture Of project
 
-![Architecture](/screenshots/3.png)
+![Architecture](/architecture.png)
 
 
 ## Project Screenshots

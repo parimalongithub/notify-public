@@ -17,7 +17,7 @@ Make sure you have the following installed:
 - Maven
 
 ## Producation
-https://notify-production-2273.up.railway.app/
+https://notifyyme.azurewebsites.net/
 
 ## Architecture Of Project
 

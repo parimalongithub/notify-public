@@ -29,7 +29,7 @@ public class Sceduled_task {
 
 
 
-    @Scheduled(fixedDelay = 15 * 24 * 60 * 60 * 1000) 
+    @Scheduled(fixedDelay = 15 * 24 * 60 * 60 * 1000) //15 days wait 
     public void myScheduledMethod() {
 
         List <String > listArtist= Userservice.getArtist();

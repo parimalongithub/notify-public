@@ -16,8 +16,6 @@ Make sure you have the following installed:
 - Java 17
 - Maven
 
-## Producation
-https://notifyyme.azurewebsites.net/
 
 ## Architecture Of Project
 

@@ -7,16 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.notify.Entity.User;
-import com.example.notify.Repository.userrpository;
+import com.example.notify.Repository.userrepository;
 
 
 @Service
 public class userService {
 
     @Autowired
-    private userrpository Userrpository;
+    private userrepository Userrpository;
 
-    public Long User_id;
+    public String User_id;
 
 
    
@@ -62,7 +62,7 @@ public class userService {
         return List_Of_All_Email;
     }
     
-    public User finduserbyId(Long id){
+    public User finduserbyId(String id){
         User user=Userrpository.findById(id).get();
         return user;
     }

@@ -1,11 +1,9 @@
 package com.example.notify.Entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,22 +14,19 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "UserData")
+@Document(collection = "user-data") 
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id; 
 
-    @Column(name = "email")
+    @Field(name = "email")
     private String email;
 
-    @Column(name = "artist")
+    @Field(name = "artist")
     private String artistName;
 
-    @Column(name = "city")
+    @Field(name = "city")
     private String city;
 
-  
 }

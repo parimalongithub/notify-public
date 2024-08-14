@@ -8,7 +8,6 @@
 
     <link rel="icon" type="image/x-icon" href="/icon.ico">
 
-
     <script th:inline="javascript">
         var showSuccess =  false;
 
@@ -32,9 +31,9 @@
         }
 
         .container {
-            width: 80%; /* Adjust the width for larger screens */
-            max-width: 400px; /* Set a maximum width */
-            background-color: rgba(255, 255, 255, 0.8); /* Added background transparency */
+            width: 80%;
+            max-width: 400px;
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -82,13 +81,18 @@
         .footer {
             text-align: center;
             color: #010101;
-            margin-top: 20px; /* Add margin to the top */
+            margin-top: 20px;
         }
 
-        /* Media Query for Smaller Screens */
+        .github-logo {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+        }
+
         @media only screen and (max-width: 600px) {
             .container {
-                width: 90%; /* Adjust the width for smaller screens */
+                width: 90%;
             }
         }
     </style>
@@ -126,6 +130,10 @@
 
         <div class="footer">
             Made with ❤️ by Parimal
+            <br>
+            <a href="https://github.com/parimalongithub/notify-public-" target="_blank" rel="noopener noreferrer">
+                <img src="https://github.com/fluidicon.png" alt="GitHub Logo" class="github-logo">
+            </a>
         </div>
     </div>
 </body>

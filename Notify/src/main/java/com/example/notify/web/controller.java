@@ -43,13 +43,11 @@ public class controller {
     public String savedata(@ModelAttribute("userdata") User user,Model model){
         Userservice.savedata(user);
          serpApiService.Artist=Userservice.finduserbyId(Userservice.User_id).getArtistName();
-         System.out.println(serpApiService.Artist);
          serpApiService.City=Userservice.finduserbyId(Userservice.User_id).getCity();
          Email=Userservice.finduserbyId(Userservice.User_id).getEmail();
 
          apiDataResponse =serpApiService.searchEvents();
-         System.out.println(apiDataResponse);
-         if(apiDataResponse!=null){
+         if(apiDataResponse.getEvents_results()!=null){
          ApiDataResponse.EventsResult eventResult = apiDataResponse.getEvents_results().get(0);
             
                   try {
